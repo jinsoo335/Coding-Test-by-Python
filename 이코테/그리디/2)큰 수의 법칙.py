@@ -1,25 +1,26 @@
-N, M, K = map(int, input().split())
+'''
+서로 다른 N개의 자연수의 합이 S라고 한다. S를 알 때, 자연수 N의 최댓값은 얼마일까?
 
-num_line = list(map(int, input().split()))
+1) 더해가다가 합이 넘어가면, 이전 값을 빼고 합에 맞는 값을 더한다.
 
-num_line.sort(reverse=True)
 
-check = 0
+
+'''
+S = int(input())
+
 result = 0
+index = 1
+count = 0
 
-while check <= M:
-  for i in range(K):
-    if check == M:
-      break
-
-    result += num_line[0]
-    check += 1
-
-  if check == M:
+while True:
+  result += index
+  index += 1
+  count += 1
+  
+  if result > S:
     break
-  
-  result += num_line[1]
-  check += 1
-  
 
-print(result)
+if result > S:
+  print(count - 1)
+else:
+  print(count)
