@@ -1,5 +1,13 @@
 # Coding-test
 
+<h1>주의 사항</h1>
+<body> 
+  <p>
+    <li>변수 이름은 알기 쉽게 쓰기</li>
+    
+  </p> 
+</body>
+
 <h1>그리디</h1>
 <body> 
   <p>
